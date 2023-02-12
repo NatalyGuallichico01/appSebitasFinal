@@ -9,6 +9,7 @@ use Classes\Paginacion;
 
 class ClienteController{
     public static function index(Router $router){
+        session_start();
         isAdmin();
         // $clientes=Usuario::all();
         // echo json_encode($clientes);
@@ -64,7 +65,7 @@ class ClienteController{
     }
 
     public static function crear(Router $router){
-        
+        session_start();
         isAdmin();
 
         $usuario=new Usuario;
@@ -113,6 +114,7 @@ class ClienteController{
     }
 
     public static function actualizar(Router $router){
+        session_start();
         isAdmin();
 
         if(!is_numeric($_GET['id'])) return;
@@ -141,6 +143,7 @@ class ClienteController{
     }
 
     public static function eliminar(){
+        session_start();
         isAdmin();
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $id=$_POST['id'];

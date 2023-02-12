@@ -8,7 +8,7 @@ use Classes\Paginacion;
 
 class ServicioController{
     public static function index(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
 
@@ -49,7 +49,7 @@ class ServicioController{
         ]);
     }
     public static function crear(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
 
@@ -73,7 +73,7 @@ class ServicioController{
         ]);
     }
     public static function actualizar(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
        
@@ -97,7 +97,7 @@ class ServicioController{
         ]);
     }
     public static function eliminar(){
-        //session_start();
+        session_start();
 
         isAdmin();
         if($_SERVER['REQUEST_METHOD'] === 'POST'){

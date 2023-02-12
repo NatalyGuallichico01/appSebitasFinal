@@ -8,7 +8,7 @@ use MVC\Router;
 
 class AdminController{
     public static function index(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
 
@@ -87,7 +87,7 @@ class AdminController{
 
     //reportes
     public static function filtro(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
 
@@ -167,7 +167,7 @@ class AdminController{
 
 
     public static function filtrar(Router $router){
-        //session_start();
+        session_start();
 
         isAdmin();
 

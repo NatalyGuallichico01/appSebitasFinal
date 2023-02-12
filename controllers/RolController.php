@@ -8,6 +8,7 @@ use MVC\Router;
 class RolController{
     public static function index(Router $router){
         //echo "desde roles";
+        session_start();
         isAdmin();
         $perfil=Rol::all();
         
@@ -22,7 +23,7 @@ class RolController{
     }
 
     public static function crear(Router $router){
-        
+        session_start();
         isAdmin();
 
         $perfil=new Rol;
@@ -47,6 +48,7 @@ class RolController{
     }
 
     public static function actualizar(Router $router){
+        session_start();
         isAdmin();
 
         $perfil=new Rol;
@@ -78,6 +80,7 @@ class RolController{
     }
 
     public static function eliminar(){
+        session_start();
         isAdmin();
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $id=$_POST['id'];
