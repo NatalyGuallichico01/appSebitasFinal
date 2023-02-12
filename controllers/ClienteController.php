@@ -11,8 +11,8 @@ class ClienteController{
     public static function index(Router $router){
         session_start();
         isAdmin();
-        // $clientes=Usuario::all();
-        // echo json_encode($clientes);
+        $clientes=Usuario::all();
+        echo json_encode($clientes);
 
 
 
@@ -52,7 +52,8 @@ class ClienteController{
         }
         
         //USUARIOS CLIENTES
-        $usuarios=Usuario::paginar($registrosPagina, $paginacion->offset());
+       // $usuarios=Usuario::paginar($registrosPagina, $paginacion->offset());
+       // $usuarios=Usuario::all();
         //debuguear($usuarios);
 
 
