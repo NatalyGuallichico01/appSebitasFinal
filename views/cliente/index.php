@@ -118,7 +118,7 @@
 </ul>
 
 <?php
-echo $paginacion;
+//echo $paginacion;
 ?>
 
 <?php 

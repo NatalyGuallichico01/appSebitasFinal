@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div class="campo">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" placeholder="Nombre del Servicio" name="nombre" value="<?php echo $servicio->nombre; ?>"/>

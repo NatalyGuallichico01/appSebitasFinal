@@ -22,5 +22,5 @@ include_once __DIR__ . '/../templates/barra.php';
 </ul>
 
 <?php
-echo $paginacion;
+//echo $paginacion;
 ?>

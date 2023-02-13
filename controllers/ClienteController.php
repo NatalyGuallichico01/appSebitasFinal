@@ -12,7 +12,7 @@ class ClienteController{
         session_start();
         isAdmin();
         $clientes=Usuario::all();
-        echo json_encode($clientes);
+        //echo json_encode($clientes);
 
 
 
@@ -34,33 +34,33 @@ class ClienteController{
         
 
         //PAGINACION
-        $paginaActual=$_GET['page'];
-        $paginaActual=filter_var($paginaActual, FILTER_VALIDATE_INT);
-        if(!$paginaActual || $paginaActual <1){
-            header('Location: /clientes?page=1');
-        }
+        // $paginaActual=$_GET['page'];
+        // $paginaActual=filter_var($paginaActual, FILTER_VALIDATE_INT);
+        // if(!$paginaActual || $paginaActual <1){
+        //     header('Location: /clientes?page=1');
+        // }
         //debuguear($paginaActual);
 
         //$paginaActual=1;
-        $registrosPagina=2;
-        $total=Usuario::total();
+        // $registrosPagina=2;
+        // $total=Usuario::total();
 
-        $paginacion=new Paginacion($paginaActual, $registrosPagina, $total);
+        // $paginacion=new Paginacion($paginaActual, $registrosPagina, $total);
 
-        if($paginacion->totalPaginas() <$paginaActual){
-            header('Location: /clientes?page=1');
-        }
+        // if($paginacion->totalPaginas() <$paginaActual){
+        //     header('Location: /clientes?page=1');
+        // }
         
         //USUARIOS CLIENTES
        // $usuarios=Usuario::paginar($registrosPagina, $paginacion->offset());
-       // $usuarios=Usuario::all();
+        $usuarios=Usuario::all();
         //debuguear($usuarios);
 
 
         $router->render('cliente/index', [
             'nombre'=>$_SESSION['nombre'],
             'usuarios'=>$usuarios,
-            'paginacion'=>$paginacion->paginacion()
+            //'paginacion'=>$paginacion->paginacion()
 
         ]);
     }

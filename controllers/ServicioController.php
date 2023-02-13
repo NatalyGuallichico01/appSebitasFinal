@@ -15,37 +15,37 @@ class ServicioController{
 
 
          //PAGINACION
-         $paginaActual=$_GET['page'];
-         $paginaActual=filter_var($paginaActual, FILTER_VALIDATE_INT);
-         if(!$paginaActual || $paginaActual <1){
-             header('Location: /servicios?page=1');
-         }
+        //  $paginaActual=$_GET['page'];
+        //  $paginaActual=filter_var($paginaActual, FILTER_VALIDATE_INT);
+        //  if(!$paginaActual || $paginaActual <1){
+        //      header('Location: /servicios?page=1');
+        //  }
          //debuguear($paginaActual);
  
-         //$paginaActual=1;
-         $registrosPagina=5;
-         $total=Servicio::total();
+        //  //$paginaActual=1;
+        //  $registrosPagina=5;
+        //  $total=Servicio::total();
  
-         $paginacion=new Paginacion($paginaActual, $registrosPagina, $total);
+        //  $paginacion=new Paginacion($paginaActual, $registrosPagina, $total);
  
-         if($paginacion->totalPaginas() <$paginaActual){
-             header('Location: /servicios?page=1');
-         }
+        //  if($paginacion->totalPaginas() <$paginaActual){
+        //      header('Location: /servicios?page=1');
+        //  }
 
           //USUARIOS CLIENTES
-        $servicios=Servicio::paginar($registrosPagina, $paginacion->offset());
+        //$servicios=Servicio::paginar($registrosPagina, $paginacion->offset());
         //debuguear($usuarios);
 
 
 
 
 
-        //$servicios=Servicio::all();
+        $servicios=Servicio::all();
 
         $router->render('servicios/index', [
             'nombre'=>$_SESSION['nombre'],
             'servicios'=>$servicios,
-            'paginacion'=>$paginacion->paginacion()
+            //'paginacion'=>$paginacion->paginacion()
         ]);
     }
     public static function crear(Router $router){
