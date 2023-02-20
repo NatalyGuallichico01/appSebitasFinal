@@ -12,7 +12,7 @@ class ClienteController{
         session_start();
         isAdmin();
         $clientes=Usuario::all();
-        //echo json_encode($clientes);
+        echo json_encode($clientes);
 
 
 

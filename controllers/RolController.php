@@ -12,6 +12,7 @@ class RolController{
         isAdmin();
         $perfil=Rol::all();
         
+        
 
 
         $router->render('rol/index', [
