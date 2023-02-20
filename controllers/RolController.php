@@ -72,7 +72,7 @@ class RolController{
             }
         }
 
-        $router->render('roles/actualizar', [
+        $router->render('rol/actualizar', [
             'nombre'=>$_SESSION['nombre'],
             'perfil'=>$perfil,
             'alertas'=>$alertas
