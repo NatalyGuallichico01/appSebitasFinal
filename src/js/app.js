@@ -108,6 +108,7 @@ function pagSiguiente (){
 async function checkAPI(){
     try {
         //const url='http://localhost:3000/api/servicios';
+        //const url='http://us-cdbr-east-06.cleardb.net/api/servicios';
         const url= 'https://appsebitasweb.herokuapp.com/api/servicios';
         const resultado= await fetch(url);
         const servicios=await resultado.json();
