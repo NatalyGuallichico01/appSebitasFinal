@@ -13,7 +13,7 @@
     <a class="boton" href="/admin">Ver Citas</a>
     <a class="boton" href="/servicios">Ver Servicios</a>
     <a class="boton" href="servicios/crear">Nuevo Servicio</a>
-    <a class="boton" href="/clientes">Ver Clientes</a>
+    <a class="boton" href="/cliente">Ver Clientes</a>
 
 </div>
 
