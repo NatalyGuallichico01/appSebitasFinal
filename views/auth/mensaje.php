@@ -1,2 +1,4 @@
-<h1 class="nombrePagina">Confirma tu cuenta</h1>
-<p class="descripcionPagina">Confirma tu registro dando clic en el enlace  de confirmación enviado a tu email.</p>
+<h1 class="nombrePagina">Creaste una cuenta</h1>
+<?php include_once __DIR__ . '/../templates/alertas.php'; ?>
+<p class="descripcionPagina">Para poder ingresar al sistema inica sesión</p>
+<a href="/">Iniciar Sesión</a>
