@@ -32,7 +32,7 @@ class ServicioController{
              header('Location: /servicios?page=1');
          }
 
-    //USUARIOS CLIENTES
+          //USUARIOS CLIENTES
         $servicios=Servicio::paginar($registrosPagina, $paginacion->offset());
         debuguear($usuarios);
 
