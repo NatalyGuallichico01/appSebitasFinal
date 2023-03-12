@@ -42,7 +42,7 @@ class Email{
         //$mail->SMTPSecure='tls';
 
         $mail->setFrom('cuentas@appsebitas.com');
-        $mail->addAddress('cuentas@appsebitas.com', 'AppSebitas.com');
+        $mail->addAddress('nataly.guallichico@epn.edu.ec', 'AppSebitas.com');
         $mail->Subject = 'Confirmar Cuenta';
 
         //SET HTML
